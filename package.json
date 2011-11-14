@@ -1,0 +1,19 @@
+{
+	"author": "Rouzbeh Delavari <rouzwawi@gmail.com>",
+	"name": "destrruc",
+	"description": "HTTP Restful interface in express for mongoose models defined using modef",
+	"version": "0.1.0",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/rouzwawi/destrruc.git"
+	},
+	"main": "index",
+	"engines": {
+		"node": "~0.6.0"
+	},
+	"dependencies": {
+		"tamejs": ">= 0.4.5",
+		"modef": "~ 0.1.0"
+	},
+	"devDependencies": {}
+}
