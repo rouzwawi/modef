@@ -12,7 +12,6 @@
 		"node": "~0.6.0"
 	},
 	"dependencies": {
-		"tamejs": ">= 0.4.5",
 		"modef": "~ 0.1.0"
 	},
 	"devDependencies": {}
