@@ -43,7 +43,7 @@
 
 
 ## View your models
-	m.printHierarchies();
+	modef.printHierarchies();
 
 
 	Author (root)
@@ -58,11 +58,11 @@
 
 ## Use defined Mongoose Models
 	// modef exports mongoose models
-	var post = new m['Post']();
+	var post = new modef['Post']();
 	post.body = 'Lorem ipsum dolor sit amet, consectetur...';
 	post.save();
 
-	var author = new m['Author']();
+	var author = new modef['Author']();
 	author.name = 'John Author';
 	author.username = 'john.author';
 	author.posts.push(post);
