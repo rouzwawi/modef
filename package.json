@@ -1,15 +1,17 @@
 {
-  "author": "Rouzbeh Delavari <rouzwawi@gmail.com>",
-  "name": "modef",
-  "description": "Helper for defining connected models in mongoose",
-  "version": "0.1.0",
-  "repository": {
-    "url": ""
-  },
-  "main": "index",
-  "engines": {
-    "node": "~0.6.0"
-  },
-  "dependencies": {},
-  "devDependencies": {}
+	"author": "Rouzbeh Delavari <rouzwawi@gmail.com>",
+	"name": "modef",
+	"description": "Helper for defining connected models in mongoose",
+	"version": "0.1.0",
+	"repository": {
+		"url": ""
+	},
+	"main": "index",
+	"engines": {
+		"node": "~0.6.0"
+	},
+	"dependencies": {
+		"mongoose": ">= 2.3.12"
+	},
+	"devDependencies": {}
 }
