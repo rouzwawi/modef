@@ -6,7 +6,7 @@
 
 
 ## Require Modef
-	var m = require('modef');
+	var modef = require('modef');
 	var model	= modef.model,
 		common	= modef.common,
 		create	= modef.create
