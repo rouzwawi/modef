@@ -1,4 +1,4 @@
-# Modef
+# modef
 
 ## Connect Mongoose
 	var mongoose = require('mongoose');
@@ -7,6 +7,10 @@
 
 ## Require Modef
 	var m = require('modef');
+	var model	= modef.model,
+		common	= modef.common,
+		create	= modef.create
+	;
 
 
 ## Example Usage
@@ -27,19 +31,20 @@
 	// one-to-many connections imply opposite many-to-one connection
 	// Picture-Post has many-to-many connection
 	// model('<entity-name>', <connections>*, MongooseSchema)
-	m.model('Author' ,  Author);
-	m.model('Post'   , 'Author', ['Picture'], PostAndComment);
-	m.model('Comment', 'Post'  ,  'Author'  , PostAndComment);
-	m.model('Picture', 'Author', ['Post']   , Picture);
+	model('Author' ,  Author);
+	model('Post'   , 'Author', ['Picture'], PostAndComment);
+	model('Comment', 'Post'  ,  'Author'  , PostAndComment);
+	model('Picture', 'Author', ['Post']   , Picture);
 
 	// Fields common to all models
-	m.common('name', { type: String, index: true });
+	common('name', { type: String, index: true });
 
-	m.create();
+	create();
 
 
 ## View your models
 	m.printHierarchies();
+
 
 	Author (root)
 	 `- Post
