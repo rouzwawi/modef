@@ -1,12 +1,15 @@
-***Connect Mongoose***
+# Modef
+
+## Connect Mongoose
 	var mongoose = require('mongoose');
 	var mongooseDb = mongoose.connect('mongodb://localhost/blog');
 
 
-***Require Modef***
+## Require Modef
 	var m = require('modef');
 
-***Example Usage***
+
+## Example Usage
 	var Author = {
 		username: { type: String }
 	};
@@ -35,7 +38,7 @@
 	m.create();
 
 
-***View your models***
+## View your models
 	m.printHierarchies();
 
 	Author (root)
@@ -48,7 +51,7 @@
 	         `- Comment
 
 
-***Use defined Mongoose Models***
+## Use defined Mongoose Models
 	// modef exports mongoose models
 	var post = new m['Post']();
 	post.body = 'Lorem ipsum dolor sit amet, consectetur...';
