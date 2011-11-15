@@ -47,7 +47,7 @@ A callback function for rendering the entity
 A function for creating a mongoose query object from the :id parameter
 
 
-## Populating entities
+## Populating connections
 Using [mongoose populate](http://mongoosejs.com/docs/populate.html) destrruc gives
 you a way to populate connected fields when doing GETs. Note, this only goes down one
 level in the connections.
