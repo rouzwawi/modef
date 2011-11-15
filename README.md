@@ -1,5 +1,10 @@
 # modef
 
+
+## Installation
+	npm install modef
+
+
 ## Connect Mongoose
 	var mongoose = require('mongoose');
 	var mongooseDb = mongoose.connect('mongodb://localhost/blog');
