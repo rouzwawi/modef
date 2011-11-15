@@ -72,5 +72,5 @@ Some examples:
 	# author with posts, but only post heading and date
 	/author/:id?include=posts.heading|date
 	
-	# same as above, but also include the authors project name
-	/author/:id?include=posts.heading|date,projects.name
+	# same as above, but also include the authors pictures names
+	/author/:id?include=posts.heading|date,pictures.name
