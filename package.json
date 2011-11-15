@@ -11,7 +11,9 @@
 	"engines": {
 		"node": "~0.6.0"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"tamejs": ">= 0.4.5"
+	},
 	"devDependencies": {
 		"modef": "~ 0.1.0"
 	}
