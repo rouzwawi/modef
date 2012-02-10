@@ -14,12 +14,12 @@ Define your models using modef. Here done in a separate module (see modef docs).
 
 	require('./model/blog-models.js');
 
-Use destrruc() on express server to set up resource routes.
+Use `destrruc()` function in express server to set up resource routes.
 
 	var express = require('express');
 	var app = express.createServer();
 
-	app.destrruc({});
+	app.destrruc();
 
 This will set up CRUD routes for all your modef defined models.
 
@@ -31,7 +31,7 @@ This will set up CRUD routes for all your modef defined models.
 
 ## Setup options
 Setting up destrruc, you can pass these options to customize some of the behavior.
-This is the default behavior.
+These are the defaults.
 
 	app.destrruc({
 		render: function(req, res, modelName, entity, next) {
@@ -40,11 +40,9 @@ This is the default behavior.
 		id: function(id) { return { _id: id }; }
 	});
 
-### render
-A callback function for rendering the entity
+`render:` - A callback function for rendering the entity
 
-### id
-A function for creating a mongoose query object from the :id parameter
+`id:` - A function for creating a mongoose query object from the :id parameter
 
 
 ## Populating connections
@@ -74,3 +72,13 @@ Some examples:
 	
 	# same as above, but also include the authors pictures names
 	/author/:id?include=posts.heading|date,pictures.name
+
+
+## Events
+
+	destrruc.audit(function(action, modelName, entity, fields) {
+		console.log('action:%s, model:%s, id:%s', action, modelName, entity._id);
+		for (field in fields) {
+			console.log('\t %s = %s', field, fields[field]);
+		}
+	});
