@@ -13,6 +13,6 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"mongoose": ">= 2.3.12"
+		"mongoose": ">= 2.5.7"
 	}
 }
