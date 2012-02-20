@@ -23,9 +23,9 @@ Use `destrruc()` function in express server to set up resource routes.
 
 This will set up CRUD routes for all your modef defined models.
 
-	POST    /:model      ->  Create Model from req.body.author
+	POST    /:model      ->  Create Model from req.body
 	GET     /:model/:id  ->  Return Model :id as JSON
-	PUT     /:model/:id  ->  Update Model :id to req.body.author (per field updates)
+	PUT     /:model/:id  ->  Update Model :id to req.body (per field updates)
 	DELETE  /:model/:id  ->  Delete Model :id
 
 
