@@ -9,7 +9,7 @@
 	},
 	"main": "index",
 	"engines": {
-		"node": "~0.6.14"
+		"node": "~0.6.0"
 	},
 	"devDependencies": {
 		"mongoose": ">= 2.5.7"
