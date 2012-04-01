@@ -11,10 +11,8 @@ connections = {}
 aliases = {}
 roots = {}
 
-
-#*******************************************************************
+#-------------------------------------------------------------------
 # Internal functions
-##
 
 firstLower = (name) -> name.substr(0,1).toLowerCase() + name.substr(1)
 connectionName = (name) -> name.toLowerCase()
@@ -51,9 +49,8 @@ searchRoots = ->
 				roots[c.to] = module.exports[c.to]
 
 
-#*******************************************************************
+#-------------------------------------------------------------------
 # Functions for data model hierarchies
-##
 
 hierarchies = ->
 	level = (nodes, vs, node) ->
@@ -110,30 +107,27 @@ printHierarchies = ->
 		level stack, [], root
 
 
-#*******************************************************************
+#-------------------------------------------------------------------
 # Exported functions
-##
 
-##
 # Defines a common field that will be added to all models.
-##
 common = (name, type) ->
 	commons.push name:name, type:type
 
-##
-# Defines a model from a schema definition, with connections.
-#
-# All arguments in position 1 to last-1 will be treated as
-# connection declatations. Last argument is the schema definition.
-#
-# A connection declaration is either a String with the name
-# of the connected model, or an Array containing one String
-# with the name of the connected model.
-# 
-# Examples:
-# model('Post', 'Author', {...});
-# model('Essay', ['Author'], 'Institute', {...});
-##
+###
+Defines a model from a schema definition, with connections.
+
+All arguments in position 1 to last-1 will be treated as
+connection declatations. Last argument is the schema definition.
+
+A connection declaration is either a String with the name
+of the connected model, or an Array containing one String
+with the name of the connected model.
+
+Examples:
+model('Post', 'Author', {...});
+model('Essay', ['Author'], 'Institute', {...});
+###
 model = (name, rest...) ->
 	# last argument is the schema template
 	schemaTemplate = rest[rest.length - 1]
@@ -151,16 +145,12 @@ model = (name, rest...) ->
 			connect name, connection, field, false
 			connect connection, name, connectionName(name), true
 
-##
 # Returns a reference type
-##
 ref = (modelName) ->
 	type:ObjectId
 	ref:modelName
 
-##
 # Creates all mongoose Models and exports them by name
-##
 create = ->
 	# create connections in templates
 	for from,connectees of connections
