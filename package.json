@@ -1,20 +1,20 @@
 {
-	"author": "Rouzbeh Delavari <rouzwawi@gmail.com>",
-	"name": "modef",
-	"description": "Helper for defining connected models in mongoose",
-	"version": "0.1.1",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/rouzwawi/modef.git"
-	},
-	"main": "index",
-	"engines": {
-		"node": "~0.6.0"
-	},
-	"devDependencies": {
-		"mongoose": ">= 2.5.7"
-	},
-	"dependencies": {
-		"tamejs": ">= 0.4.5"
-	}
+   "author": "Rouzbeh Delavari <rouzwawi@gmail.com>",
+   "name": "modef",
+   "description": "Helper for defining connected models in mongoose",
+   "version": "0.1.1",
+   "repository": {
+      "type": "git",
+      "url": "git://github.com/rouzwawi/modef.git"
+   },
+   "main": "index",
+   "engines": {
+      "node": "~0.6.0"
+   },
+   "devDependencies": {
+      "mongoose": ">= 2.5.7"
+   },
+   "dependencies": {
+      "tamejs": ">= 0.4.5"
+   }
 }

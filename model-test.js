@@ -11,17 +11,17 @@ var m = require('modef');
 m.common('name', { type: String, index: true });
 
 var Author = {
-	username: { type: String }
+   username: { type: String }
 };
 
 // Common schema for several entities
 var PostAndComment = {
-	body: { type: String },
-	date: { type: Date, default: function(){ return new Date(); } }
+   body: { type: String },
+   date: { type: Date, default: function(){ return new Date(); } }
 };
 
 var Picture = {
-	url: { type: String }
+   url: { type: String }
 };
 
 
