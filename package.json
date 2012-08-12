@@ -2,7 +2,7 @@
    "author": "Rouzbeh Delavari <rouzwawi@gmail.com>",
    "name": "modef",
    "description": "Helper for defining connected models in mongoose",
-   "version": "0.1.2",
+   "version": "0.1.3",
    "repository": {
       "type": "git",
       "url": "git://github.com/rouzwawi/modef.git"
